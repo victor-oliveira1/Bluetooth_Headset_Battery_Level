@@ -56,7 +56,7 @@ def main():
             try:
                 s = socket.socket(socket.AF_BLUETOOTH,
                                   socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
-                s.connect((device, 4))
+                s.connect((device, 1))
 
                 while getATCommand(s, s.recv(128), device):
                     pass
